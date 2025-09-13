@@ -1,8 +1,8 @@
 ---
 title: "What is ewwii?"
 description: "An explanation on what ewwii is and is not"
-pubDate: "Sep 08 2025"
-heroImage: "../../assets/blog-placeholder-3.jpg"
+pubDate: "2025-09-08T18:30:00"
+heroImage: "../../assets/undraw_faq.png"
 ---
 
 Ewwii is a fork of [eww (Elkowars Wacky Widgets)](https://github.com/elkowar/eww) rewritten to be more powerful, flexible, and extensible.
