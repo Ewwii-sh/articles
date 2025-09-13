@@ -6,6 +6,7 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://ewwii-sh.github.io/articles/",
+  site: "https://ewwii-sh.github.io/",
+  base: "/articles",
   integrations: [mdx(), sitemap()],
 });

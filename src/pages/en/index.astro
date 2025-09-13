@@ -110,7 +110,7 @@ const posts = (await getCollection('articles')).sort(
         <ul id="searchResults">
           {posts.map((post) => (
             <li>
-              <a href={`/en/${post.id}/`}>
+              <a href={`/articles/en/${post.id}/`}>
                 {post.data.heroImage && (
                   <Image width={720} height={360} src={post.data.heroImage} alt="" />
                 )}
