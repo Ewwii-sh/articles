@@ -64,3 +64,12 @@ curl -sSL https://raw.githubusercontent.com/Ewwii-sh/eiipm/main/install.sh | sh 
 And if you are not, clone `https://github.com/Ewwii-sh/eiipm.git` and repeate the steps mentioned above in the [installing ewwii](#installing-ewwii) section.
 
 If you want to install through Cargo, then checkout [installing using cargo](https://ewwii-sh.github.io/eiipm/#4-using-cargo) in the eiipm docs.
+
+### Next steps
+
+Now that you have ewwii and potentially eiipm as well, we can move on to the next step--reading the documentation.
+
+You can use the following links to reach the documentation of both ewwii and eiipm.
+
+- [Ewwii documentation](/ewwii)
+- [Eiipm documentation](/eiipm)
