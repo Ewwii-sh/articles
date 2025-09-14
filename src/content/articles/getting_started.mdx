@@ -1,0 +1,115 @@
+---
+title: "Getting Started"
+description: "Getting started with ewwii and its ecosystem"
+pubDate: "2025-09-08T19:00:00"
+heroImage: "../../assets/undraw_runner-start.png"
+---
+
+To get started with ewwii, we recommend installing both `ewwii` and `eiipm`.
+
+What is eiipm, you may ask. Simply put, it's a package manager which will allow you to install tools from the ewwii ecosystem.
+
+### Installing
+
+There are 3 ways through which you can install ewwii/eiipm:
+
+- Through the installer (recommended but only for Linux).
+- Building yourself (recommended).
+- Installing via [Cargo](https://doc.rust-lang.org/cargo/).
+
+#### Using the installer
+
+This is the simplest and fastest method through which you can install ewwii/eiipm (based on your choice).
+
+Simply run the following command and follow the instructions to have them installed in no time:
+
+```bash
+$ curl -sSL https://ewwii-sh.github.io/install.sh | install.sh
+```
+
+#### Building from source
+
+If you are not on Linux, then this is the recommended approach for you.
+
+Before you build from source, make sure that you have [git](https://git-scm.com/) and [rust](https://www.rust-lang.org/) installed.
+
+##### **Step-1:** Cloning
+
+To start off, you should clone the repository of ewwii.
+
+```bash
+$ git clone https://github.com/Ewwii-sh/ewwii.git
+```
+
+##### Step-2: Checkout the cloned repository
+
+Enter into the cloned repository with `cd`.
+
+```bash
+$ cd ewwii
+```
+
+##### Step-3: Building
+
+Now that you are in the ewwii source code. Run the following command to start building it:
+
+```bash
+$ cargo build --release
+```
+
+##### Step-4: Moving to `/usr/local/bin`
+
+Now that you compiled ewwii, you can find a binary named `ewwii` in `./target/release/`. Now you have to copy that to `/usr/local/bin` so that it will be globally accessable.
+
+```bash
+$ sudo cp ./target/release.ewwii /usr/local/bin/
+```
+
+##### Step-5: Installing eiipm
+
+Now that you have ewwii ready, repeat the same steps after cloning `https://github.com/Ewwii-sh/eiipm.git`.
+
+<details>
+  <summary>Show me how</summary>
+
+```bash
+# Step-1: Clone
+$ git clone https://github.com/Ewwii-sh/eiipm.git
+# Step-2: Enter
+$ cd eiipm
+# Step-3: Build
+$ cargo build --release
+# Step-4: Copy
+$ sudo cp ./target/release/eiipm /usr/local/bin/
+```
+
+</details>
+
+<br></br>
+
+#### Installing through Cargo
+
+Installing ewwii/eiipm through cargo is not really recommended because it installs them to `~/.cargo/bin` which is not a global destination. Sure, you may be able to access it, but other programs may not.
+
+If really want to install through cargo, then you can run the commands shown below to install ewwii and eiipm.
+
+Installing ewwii through cargo:
+
+```bash
+$ cargo install --git https://github.com/Ewwii-sh/ewwii
+```
+
+Installing eiipm through cargo:
+
+```bash
+$ cargo install --git https://github.com/Ewwii-sh/eiipm
+```
+
+### Next steps
+
+Now that you have ewwii and potentially eiipm as well, we can move on to the next step--reading the documentation.
+
+You can use the following links to reach the documentation of both ewwii and eiipm.
+
+- [Ewwii documentation](/ewwii)
+- [Eiipm documentation](/eiipm)
