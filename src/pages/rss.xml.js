@@ -1,16 +1,18 @@
-import { getCollection } from 'astro:content';
-import rss from '@astrojs/rss';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import rss from "@astrojs/rss";
+import { getCollection } from "astro:content";
 
 export async function GET(context) {
-	const posts = await getCollection('blog');
-	return rss({
-		title: SITE_TITLE,
-		description: SITE_DESCRIPTION,
-		site: context.site,
-		items: posts.map((post) => ({
-			...post.data,
-			link: `/blog/${post.id}/`,
-		})),
-	});
+  const articles = await getCollection("articles");
+
+  return rss({
+    title: "Ewwii Articles",
+    description: "Welcome to ewwii articles!",
+    site: context.site ?? "https://ewwii-sh.github.io/articles",
+    items: articles.map((article) => ({
+      title: article.data.title,
+      description: article.data.description,
+      pubDate: article.data.date,
+      link: `/en/${article.slug}/`,
+    })),
+  });
 }
